@@ -17,6 +17,6 @@ WORKDIR /app
 
 # Copy the jar from the build stage
 #COPY --from=build /app/target/spring-boot.jar app.jar
-COPY complete/builds/spring-boot-0.0.1-SNAPSHOT.jar /app/spring-boot-app.jar
+COPY complete/build/libs/spring-boot-0.0.1-SNAPSHOT.jar /app/spring-boot-app.jar
 # Run the app
 ENTRYPOINT ["java", "-jar", "spring-boot-app.jar"]
